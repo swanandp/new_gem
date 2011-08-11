@@ -1,0 +1,3 @@
+module NewGem
+  # Your code goes here...
+end
