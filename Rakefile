@@ -3,6 +3,7 @@ Bundler::GemHelper.install_tasks
 Bundler.setup
 
 require 'rspec/core/rake_task'
+Dir.glob('lib/tasks/*.rake').each { |r| import r }
 
 desc 'Run all tests'
 RSpec::Core::RakeTask.new(:spec) do |t|
