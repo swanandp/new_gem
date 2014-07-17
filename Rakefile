@@ -10,9 +10,9 @@ RSpec::Core::RakeTask.new(:spec) do |t|
   t.verbose    = false
 end
 
-desc "Open an irb session preloaded with the new_gem"
+desc 'Open a pry session preloaded with the new_gem'
 task :console do
-  sh 'irb -rubygems -I lib -r new_gem.rb'
+  sh %{pry -I lib -r #{File.basename(Dir.pwd)}.rb}
 end
 
-task :default => :spec
+task default: :spec

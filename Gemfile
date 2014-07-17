@@ -4,4 +4,12 @@ source 'http://rubygems.org'
 gemspec
 
 gem 'rake'
-gem 'rspec'
+
+group :development do
+  gem 'pry'
+  gem 'awesome_print'
+end
+
+group :test do
+  gem 'rspec'
+end
